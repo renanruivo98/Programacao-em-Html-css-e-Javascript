@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilo.css">
+    <title>Cadastro jogadores</title>
+	
+	<!--body<style>
+	div {
+  background-image: url("imagens/estadio.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+</style>
+-->
+<script>
+
+
+function validardados()
+			{
+				
+				
+				var nome = ct.nome.value;
+				if(nome.length == 0)
+				{
+					alert("O nome não pode estar vazio ");
+					ct.nome.focus();
+					return false;
+				}
+				var sobrenome = ct.sobrenome.value;
+				if(sobrenome.length == 0)
+				{
+					alert("O sobrenome não pode estar vazio");
+					ct.sobrenome.focus();
+					return false;
+				}
+				var data = ct.data.value;
+				
+				if(data.length == 0)
+				{
+					alert("a data não pode estar vazio!");
+					ct.data.focus();
+					return false
+				}
+				var time = ct.time.value;
+				if(time.length == 0)
+				{
+					alert("O time não pode estar vazio");
+					ct.time.focus();
+					return false;
+				}
+				alert("O formulario foi enviado");
+
+				}
+				
+				
+</script>	
+</head>
+<body>
+<div></div>
+<h2> Bem-vindo a pagina de Cadastro de jogadores. </h2>
+    <form  name="ct" method="POST" action="sucessocadastro.html" onsubmit = "return validardados()">
+    Nome: <label for="fname"></label><br>
+        <input type="text" id="nome" name="nome" value=""><br>
+    Sobrenome:   <label for="lname"></label><br>
+        <input type="text" id="sobrenome" name="sobrenome" value=""><br>
+	data de nascimento:   <label for="lname"></label><br>
+        <input type="date" id="data" name="data" value=""><br>
+	time:   <label for="lname"></label><br>
+         <input type="text" id="time" name="time" value=""><br>
+    
+	
+  
+  <input type="submit" value="enviar">
+</form>
+
+
+	
+<ol>
+<br>
+<hr>
+<h2>Links de acesso</h2>
+<p><a href="home.html">Home</a></p>
+<p><a href="consultajogadores.html">Consultar jogadores</a></p>
+<p><a href="excluirjogadores.html">Excluir jogadores</a></p>
+<p><a href="atualizacaojogadores.html">Atualizar jogadores</a></p>
+</ol>
+
+<footer>
+ <p>Elaborado por Renan Ruivo Anselmo e Elias Sobreiro</p></footer>       
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilo.css">
+    <title>Login</title>
+	<script>
+			function funcaoMaiuscula()
+			{
+				var x=document.getElementById("nomeUsuario");
+				x.value=x.value.toUpperCase();
+			}
+			function validarlogin()
+			{
+				var email = login.email.value;
+				if(email.length == 0)
+				{
+					alert("email não pode estar vazio!");
+					login.email.focus();
+					return false;
+				}
+				var senha = login.senha.value;
+				if(senha.length < 10)
+				{
+					alert("A senha não pode ter menos de 10 caracteres");
+					login.senha.focus();
+					return false;
+				}
+			
+			
+			
+			
+			
+			}
+		</script>
+	
+
+</head>
+<body>
+<h1>Bem-vindo a pagina de Login</h2>
+Insira seu Nome: <input type="text" id="nomeUsuario" onchange="funcaoMaiuscula()">
+<br>
+<center>
+   <form name="login" method="POST" action="sucessologin.html" onsubmit = "return validarlogin()">
+  
+  <label for="lname">Email :</label><br>
+  <input type="email" id="email" name="email" ><br>
+  <label for="lname">Senha</label><br>
+  <input type="password" id="senha" name="senha" ><br>
+  <input type="submit" value="enviar">
+</form>
+</center>
+<br>
+<hr>
+<p><a href="home.html"> pagina inicial.</a></p>
+    
+  
+ <footer>
+ <p>Elaborado por Renan Ruivo Anselmo e Elias Sobreiro</p></footer>
+</body>
+</html>

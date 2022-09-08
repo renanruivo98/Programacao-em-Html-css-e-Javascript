@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilo.css">
+    <title>Cadastro jogadores</title>
+	<script>
+	function validardados()
+			{
+				
+				var responsavel = cj.responsavel.value;
+				if(responsavel.length == 0)
+				{
+					alert("O responsavel não pod estar vazio");
+					cj.responsavel.focus();
+					return false;
+				}
+				var email = cj.email.value;
+				var cont= 0
+				if(email.length == 0)
+				{
+					alert("email não pode estar vazio!");
+					cj.email.focus();
+					return false;
+				}
+				var vetor = cj.time;
+				for (var i = 0; i < vetor.length; ++i){
+					if (vetor [i].checked)
+						cont = cont + 1
+				}
+				
+				if(cont != 2)
+				{
+					alert("Tem que ser selecionado 2 times");
+					return false;
+				}
+					 
+			}
+				
+				
+</script>	
+</head>
+<body>
+<h2> Bem-vindo a pagina de Cadastro de jogos. </h2>
+    <p>Cadastre seu Jogo:</p>
+
+    <form name="cj" method="POST" action="sucessocadastro.html" onsubmit = "return validardados()">
+  <label for="fname">Responsavel pelo cadastro do jogo:</label><br>
+  <input type="text" id="responsavel" name="responsavel"  ><br>
+  <label for="lname">Email para contato:</label><br>
+  <input type="email" id="email" name="email" ><br>
+  <p>Selecione os 2 times que enfrentarão:</p>
+<input type="checkbox" id="Corinthians" name="time" value="Corinthians">
+  <label for="Corinthians"> Corinthians</label><br>
+  <input type="checkbox" id="Palmeiras" name="time" value="Palmeiras">
+  <label for="Palmeiras">Palmeiras</label><br>
+  <input type="checkbox" id="Vasco" name="time" value="Vasco">
+  <label for="Vasco"> Vasco</label><br>
+  <input type="checkbox" id="Flamengo" name="time" value="Flamengo">
+  <label for="Flamengo"> Flamengo</label><br>
+   <input type="submit" value="enviar">
+</form>
+
+<hr>
+<h2>Links de acesso</h2>
+<ol>
+<p><a href="home.html">Home</a></p>
+<p><a href="consultajogos.html">Consultar Jogos</a></p>
+<p><a href="excluirjogos.html">Excluir Jogos</a></p>
+<p><a href="atualizacaojogos.html">Atualizar Jogos</a></p>
+</ol>
+<footer>
+ <p>Elaborado por Renan Ruivo Anselmo e Elias Sobreiro</p></footer>      
+</body>
+</html>
+   

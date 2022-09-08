@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualização jogos</title>
+	<link rel="stylesheet" href="css/estilo.css">
+	<script>
+			function mOver(obj)
+			{
+				obj.innerHTML="Obrigado por acessar meu site";
+			}
+			 
+			function mOut(obj)
+			{
+				obj.innerHTML="Passe o mouse";
+			}
+		</script>
+	
+</head>
+<body>
+
+
+
+<h2> Bem-vindo a pagina de Atualização de jogos. </h2>
+    <p>Atualiza seu time:</p>
+
+    <form>
+  <label for="fname">Jogo a ser atualizado:</label><br>
+  <input type="text" id="fname" name="fname" ><br>
+  <label for="lname">Nome do solicitante:</label><br>
+  <input type="text" id="lname" name="lname" ><br>
+  <label for="lname">Email para contato:</label><br>
+  <input type="email" id="lname" name="lname" ><br>
+  <input type="submit" value="enviar">
+</form>
+    
+
+<hr>
+<ol>
+<p><a href="home.html">Home</a></p>
+<p><a href="cadastrojogos.html">Cadastrar jogos</a></p>
+<p><a href="consultajogos.html">Consultar jogos</a></p>
+<p><a href="excluirjogos.html">Excluir jogos</a></p>
+</ol>  
+<div onmouseover="mOver(this)" onmouseout="mOut(this)"
+			style="background-color:#D94A38;width:60px;height:20px;padding:80px;">Passe o mouse</div>
+<footer>
+ <p>Elaborado por Renan Ruivo Anselmo e Elias Sobreiro</p></footer>      
+</body>
+</html>

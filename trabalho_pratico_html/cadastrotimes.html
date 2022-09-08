@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilo.css">
+    <title>Cadastro jogadores</title>
+	
+	<script>
+	function validardados()
+			{
+				
+				var responsavel = ct.responsavel.value;
+				var nome = ct.nome.value;
+				if(responsavel == nome)
+				{
+					alert("O nome do time não pode ser igual do responsavel ");
+					ct.nome.focus();
+					return false;
+				}
+				if(responsavel.length == 0)
+				{
+					alert("O responsavel não pode estar vazio");
+					ct.responsavel.focus();
+					return false;
+				}
+				var email = ct.email.value;
+				
+				if(email.length == 0)
+				{
+					alert("email não pode estar vazio!");
+					ct.email.focus();
+					return false
+				}
+				}
+				
+				
+</script>	
+</head>
+<body>
+<h2> Bem-vindo a pagina de Cadastro de times. </h2>
+    <p>Cadastre seu time:</p>
+
+    <form name="ct" method="POST" action="sucessocadastro.html" onsubmit = "return validardados()" >
+  <label for="fname">Nome do time:</label><br>
+  <input type="text" id="nome" name="nome"  ><br>
+  <label for="lname">Responsavel pelo time:</label><br>
+  <input type="text" id="responsavel" name="responsavel" ><br>
+  <label for="lname">Email para contato:</label><br>
+  <input type="email" id="email" name="email" ><br>
+  
+   <input type="submit" value="enviar">
+</form>
+
+<hr>
+<h2>Links de acesso</h2>
+<ol>
+
+<p><a href="home.html">Home</a></p>
+<p><a href="consultatimes.html">Consultar times</a></p>
+<p><a href="excluirtimes.html">Excluir times</a></p>
+<p><a href="atualizacaotimes.html">Atualizar times</a></p>
+</ol>  
+<footer>
+ <p>Elaborado por Renan Ruivo Anselmo e Elias Sobreiro</p></footer>      
+</body>
+</html>
